@@ -1,0 +1,10 @@
+{
+	"name" : "nave",
+	"main" : "server.js",
+	"dependencies" : {
+		"express" : "~4.0.0",
+		"mongoose" : "~3.8.0",
+		"body-parser" : "~1.4.0",
+		"method-override" : "~2.0.2"
+	}
+}
