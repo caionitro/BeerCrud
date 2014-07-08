@@ -41,6 +41,7 @@ module.exports = function(router,Beer){
 
 				beer.nome = req.body.nome;
 				beer.quantidade = req.body.quantidade;
+				beer.valor = req.body.valor;
 
 				beer.save(function(err){
 					if (err) {
@@ -51,7 +52,7 @@ module.exports = function(router,Beer){
 
 			});
 		}).delete(function(req,res){
-			Beer.remove({_id: req.params.bear_id},function(err,beeer){
+			Beer.remove({_id: req.params.beer_id},function(err,beer){
 				if (err) {
 					res.send(err);
 				};
