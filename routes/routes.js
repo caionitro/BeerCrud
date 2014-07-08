@@ -1,7 +1,8 @@
 module.exports = function(router,Beer){
 
-	router.route('/beer')
+	router.route('/beers')
 		.post(function(req,res){
+
 			var beer = new Beer();
 			beer.nome = req.body.nome;
 			beer.quantidade = req.body.quantidade;
@@ -23,7 +24,7 @@ module.exports = function(router,Beer){
 			});
 		});
 
-	router.route('/beer/:beer_id')
+	router.route('/beers/:beer_id')
 		.get(function(req,res){
 			Beer.findById(req.params.beer_id,function(eer,beer){
 				if (eer) {
@@ -57,12 +58,5 @@ module.exports = function(router,Beer){
 				res.json({message: 'Deletado com sucesso'});
 			});
 		});
-
-
-	// frontend routes =========================================================
-	// route to handle all angular requests
-	router.get('/', function(req, res) {
-		res.sendfile('./public/views/index.html'); // load our public/index.html file
-	});
 	
 };

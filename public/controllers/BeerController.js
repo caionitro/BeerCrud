@@ -1,14 +1,28 @@
-app.controller('BeerController',function($scope){
-	$scope.total = 0;
+app.controller('BeerController',function($scope,$http,$resource,$location){
 
-	$scope.beers = [
-		{nome: 'Skol', quantidade: 12, valor: 20.00},
-		{nome: 'Brahma', quantidade: 12, valor: 22.00},
-		{nome: 'Budweiser', quantidade: 12, valor: 25.00}
-	];
+	$scope.beers = [];
 
+	var resource = $resource('http://localhost:8080/api/beers/:id');
 
-	$scope.incrementar = function(){
-		$scope.total++;
+	function listaBeers(){
+		resource.query(function(retorno){
+			$scope.beers = retorno;
+		});
 	}
+
+	listaBeers();
+
+	$scope.removeBeer = function(beer){
+		console.log(beer);
+		resource.delete({id: beer._id}, function(status){
+			listaBeers();
+		});
+	}
+
+	$scope.cadastrar = function(b){
+		resource.save(b,function(){
+			$location.path('/beers');
+		});
+	}
+
 });

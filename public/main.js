@@ -1,10 +1,17 @@
-var app = angular.module('Beer',[]);
+var app = angular.module('Beer',['ngRoute','ngResource']);
 
-// app.config(function($routeProvider){
+app.config(function($routeProvider){
 
-// 	$routeProvider.when('/beer', {
-// 		templateUrl: './views/beersList.html',
-// 		controller: 'BeerController'
-// 	});
+	$routeProvider.when('/beers', {
+		templateUrl: './views/beer/beersList.html',
+		controller: 'BeerController'
+	});
 
-// });
+	$routeProvider.when('/cadastro', {
+		templateUrl: './views/beer/beersCad.html',
+		controller: 'BeerController'
+	});
+
+	$routeProvider.otherwise({redirectTo:'/'});
+
+});

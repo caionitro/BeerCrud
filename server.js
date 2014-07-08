@@ -17,9 +17,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/public'));
 
-require('./app/routes')(router,Beer); 
+require('./routes/routes')(router,Beer); 
 
-app.use('/',router);
+app.get('/', function(req, res) {
+	res.sendfile('./public/views/index.html'); // carrega o public/views/index.html 
+});
+
+app.use('/api/',router);
 
 app.listen(port);
 console.log('E a mágica começa na porta -> '+port);
