@@ -14,6 +14,6 @@
 		    <label for="valor">Valor</label>
 		    <input ng-model="beer.valor" type="text" class="form-control">
 		</div>
-		<button type="submit" class="btn btn-primary">{{botaoSubmit}}</button>
+		<button type="submit" class="btn btn-primary"> {{beer._id && 'Alterar' || 'Cadastrar'}}</button>
 	</form>
 </div>

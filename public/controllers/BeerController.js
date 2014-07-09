@@ -1,7 +1,6 @@
 app.controller('BeerController',function($scope,$http,$resource,$location,$routeParams){
 
 	$scope.beers = [];
-	$scope.botaoSubmit = 'Cadastrar';
 
 	var resource = $resource('http://localhost:8080/api/beers/:id', {}, {
 		update: { method: 'PUT' }
@@ -43,7 +42,6 @@ app.controller('BeerController',function($scope,$http,$resource,$location,$route
 		if( _id == undefined ){
 			return false;
 		}else{
-			$scope.botaoSubmit = 'Alterar';
 			resource.get({id:_id},function(retorno){
 				$scope.beer = retorno;
 			});
