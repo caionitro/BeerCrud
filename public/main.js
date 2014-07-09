@@ -12,6 +12,11 @@ app.config(function($routeProvider){
 		controller: 'BeerController'
 	});
 
+	$routeProvider.when('/cadastro/:id', {
+		templateUrl: './views/beer/beersCad.html',
+		controller: 'BeerController'
+	});
+
 	$routeProvider.otherwise({redirectTo:'/'});
 
 });
