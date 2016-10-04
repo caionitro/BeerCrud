@@ -21,6 +21,7 @@ require('./routes/routes')(router,Beer);
 
 app.get('/', function(req, res) {
 	res.sendfile('./public/views/index.html'); // carrega o public/views/index.html //hacktoberfest 2016
+	//comitei e sai correndo, ferro em quem ta lendo.
 });
 
 app.use('/api/',router);
