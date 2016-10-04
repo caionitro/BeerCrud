@@ -20,7 +20,7 @@ app.use(express.static(__dirname + '/public'));
 require('./routes/routes')(router,Beer); 
 
 app.get('/', function(req, res) {
-	res.sendfile('./public/views/index.html'); // carrega o public/views/index.html 
+	res.sendfile('./public/views/index.html'); // carrega o public/views/index.html //hacktoberfest 2016
 });
 
 app.use('/api/',router);
