@@ -29,7 +29,7 @@ app.use(express.static(__dirname + '/public'));
 require('./routes/routes')(router,Beer);
 
 app.get('/', function(req, res) {
-	res.render('index.html');
+  res.render('index.html');
 });
 
 app.use('/api/',router);
