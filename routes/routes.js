@@ -59,5 +59,5 @@ module.exports = function(router,Beer){
 				res.json({message: 'Deletado com sucesso'});
 			});
 		});
-	
+	//hacktoberfest
 };
