@@ -1,5 +1,6 @@
 var app = angular.module('Beer',['ngRoute','ngResource']);
 
+//Aqui começa as configurações do app
 app.config(function($routeProvider){
 
 	$routeProvider.when('/beers', {
