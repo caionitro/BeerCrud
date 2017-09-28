@@ -1,3 +1,4 @@
+/*tem poucos comentarios aqui MORO!?*/
 var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
