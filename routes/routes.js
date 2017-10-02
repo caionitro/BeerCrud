@@ -1,5 +1,6 @@
 module.exports = function(router,Beer){
-
+	
+	//Definindo as rotas
 	router.route('/beers')
 		.post(function(req,res){
 
