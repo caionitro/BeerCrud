@@ -1,6 +1,6 @@
 # Instalação:
 
-1. Faça o clone do repositório:
+1. Faça o clone do repositório:::
 	* ``` git clone git@github.com:caionitro/BeerCrud.git ```
 
 2. Após o clone, vamos instalar as biliotecas NPM (Node package Module):
