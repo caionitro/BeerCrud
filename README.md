@@ -1,5 +1,4 @@
 # Instalação:
-
 1. Faça o clone do repositório:
 	* ``` git clone git@github.com:caionitro/BeerCrud.git ```
 
