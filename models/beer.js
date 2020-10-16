@@ -1,4 +1,3 @@
-//beer Cachaça caraio
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
