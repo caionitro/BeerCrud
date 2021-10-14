@@ -1,5 +1,4 @@
 # Instalação:
-
 1. Faça o clone do repositório:
 	* ``` git clone git@github.com:caionitro/BeerCrud.git ```
 
@@ -14,3 +13,4 @@ que no caso eu utilizei o serviço do site: [Modulus](https://modulus.io/)
 
 5. Depois de tudo instalado, entramos via terminal e iniciamos o **server.js**
 	* ``` node server.js ```
+6. Pronto, está tudo certo! Um brinde à você!

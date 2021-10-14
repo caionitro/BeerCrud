@@ -36,6 +36,7 @@ app.controller('BeerController',function($scope,$http,$resource,$location,$route
 		$location.path('/cadastro/' + beer._id);
 	}
 
+	
 	$scope.loadBeer = function(){
 		var _id = $routeParams.id;
 

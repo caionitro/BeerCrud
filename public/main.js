@@ -1,7 +1,6 @@
 var app = angular.module('Beer',['ngRoute','ngResource']);
 
 app.config(function($routeProvider){
-
 	$routeProvider.when('/beers', {
 		templateUrl: './views/beer/beersList.html',
 		controller: 'BeerController'
@@ -16,7 +15,6 @@ app.config(function($routeProvider){
 		templateUrl: './views/beer/beersCad.html',
 		controller: 'BeerController'
 	});
-
+	
 	$routeProvider.otherwise({redirectTo:'/'});
-
 });
