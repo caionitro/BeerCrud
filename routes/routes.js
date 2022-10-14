@@ -3,7 +3,6 @@ module.exports = function(router,Beer){
 	//Definindo as rotas
 	router.route('/beers')
 		.post(function(req,res){
-
 			var beer = new Beer();
 			beer.nome = req.body.nome;
 			beer.quantidade = req.body.quantidade;
@@ -48,7 +47,7 @@ module.exports = function(router,Beer){
 					if (err) {
 						res.send(err);
 					};
-					res.json({message: 'Beer atualizada'});
+					res.json({ message: 'Beer atualizada', });
 				});
 
 			});
